@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+{% block base %}
+    <html lang="en"/>
+    <head>
+        <link rel='stylesheet' href="{% static 'css/bootstrap.min.css' %}"/>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <meta charset="UTF-8"/>
+        <title>
+            {% block title %}
+                Naor Leizer
+            {% endblock title %}
+        </title>
+        <link rel="icon" type="image/x-icon" href="{% static 'favicon.svg' %}"/>
+        {% block headers %}
+            {% comment %} if needed custom headers {% endcomment %}
+        {% endblock headers %}
+    </head>
+    <body>
+        {% block navbar %}
+        {% endblock navbar %}
+        {% block body %}
+        {% endblock body %}
+    </body>
+{% endblock base %}
